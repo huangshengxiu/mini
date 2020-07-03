@@ -1,0 +1,17 @@
+<!--components/itemlist.wxml-->
+<view class="itemlist_body item-{{showMsg.number}}">
+  <view class="item_img">
+    <image src="{{showMsg.showImg?showMsg.img:''}}" mode="aspectFit"></image>
+  </view>
+  <view class="item_msg">
+    <view class="item_title">
+      {{showMsg.name}}
+    </view>
+    <view class="item_classifcation">
+      【分类】{{showMsg.classification}}
+    </view>
+    <view class="item_efficacy">
+      【功效】{{showMsg.efficacy}}
+    </view>
+  </view>
+</view>

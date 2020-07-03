@@ -1,0 +1,30 @@
+<!--pages/center/center.wxml-->
+<view>
+
+  <view class="userinfo">
+    <block wx:if="{{!hasUserInfo && canIUse}}">
+      <image class="userinfo-avatar" src="../../assets/images/people.png" mode="cover"></image>
+      <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="btn"> 点击微信登录 </button>
+    </block>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+  <view class="item" bindtap="toBookCase">
+    <view class="wrapper">
+      <image src="../../assets/images/bookcase.png" class="item_img"></image>
+      <text class="text">我的书架</text>
+    </view>
+    <image src="/assets/images/next.png" class="next"></image>
+  </view>
+  <view class="item" bindtap="toAbout">
+    <view class="wrapper">
+      <image src="../../assets/images/about.png" class="item_img"></image>
+      <text class="text">关于</text>
+    </view>
+    <image src="/assets/images/next.png" class="next"></image>
+  </view>
+
+</view>

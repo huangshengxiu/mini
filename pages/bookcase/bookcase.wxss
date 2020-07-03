@@ -1,0 +1,38 @@
+/* pages/bookcase/bookcase.wxss */
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250rpx;
+  height: 350rpx;
+  padding: auto;
+  box-sizing: border-box;
+}
+
+.img {
+  height: 200rpx;
+  width: 200rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item_img {
+  height: 200rpx;
+}
+
+.item_text {
+  width: 200rpx;
+  height: 100rpx;
+  text-align: center;
+}

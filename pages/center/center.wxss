@@ -1,0 +1,61 @@
+/* pages/center/center.wxss */
+
+.userinfo {
+  display: flex;
+  width: 100%;
+  height: 350rpx;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ddd;
+}
+
+.btn {
+  font-weight: normal;
+  background: whitesmoke;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  margin-bottom: 20rpx;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.item {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rpx 16rpx;
+  box-sizing: border-box;
+  background: whitesmoke;
+  margin-top: 20rpx;
+}
+
+.wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.item_img {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.text {
+  height: 50rpx;
+  line-height: 50rpx;
+  padding-left: 20rpx;
+}
+
+.next {
+  width: 60rpx;
+  height: 60rpx;
+}

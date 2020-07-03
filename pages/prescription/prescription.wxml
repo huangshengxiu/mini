@@ -1,0 +1,31 @@
+<!--pages/prescription/prescription.wxml-->
+<view>
+
+  <searchresult bind:parentShow="showWhich" bind:parentGetData="getData" resultlist="{{searchResult}}" bind:parentSearchData="confirmData" name="{{name}}" page="{{page}}"></searchresult>
+
+  <block>
+    <directory leftArr="{{originlist}}" rightArr="{{alphabet}}" lefttitle="{{lt}}" righttitle="{{rt}}" bind:parentChangeData="updatelist" wx:if="{{showdirectory}}"></directory>
+    <showsearchtxt wx:else searchTxt="{{searchTxt}}" bindtap="resetToDir" keyword="{{keyword}}"></showsearchtxt>
+  </block>
+
+  <block wx:if="{{isShow}}">
+
+    <scroll-view scroll-y bindscrolltolower="loadMore" scroll-with-animation="true" scroll-top="{{topPosition}}" bindscroll="scrollPosition">
+
+      <view wx:for="{{prescriptionAll}}" wx:key="prescription_name" data-name="{{item.prescription_name}}" bindtap="toDetail">
+        <view class="item_body">
+          <view class="title">{{item.prescription_name}}</view>
+          <view class="text">【来源】{{item.origin}}</view>
+          <view class="text">【功效】{{item.efficacy}}</view>
+          <view class="text">【方歌】{{item.prescription_song}}</view>
+        </view>
+      </view>
+
+      <bottomtip showEnding="{{showEnding}}"></bottomtip>
+
+    </scroll-view>
+  </block>
+
+  <backtop wx:if="{{showBackTop}}" bindtap="onBackTop"></backtop>
+
+</view>

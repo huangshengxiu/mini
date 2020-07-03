@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<view>
+  <searchbar></searchbar>
+
+  <view class="icon">
+    <view wx:for="{{iconlist}}" wx:key="name" class="iconitem" bindtap="clickInfo" data-msg="{{item.path}}">
+      <image src="{{item.url}}"></image>
+      <view>{{item.name}}</view>
+    </view>
+  </view>
+
+  <view class="catagotry">
+
+    <view class="listtitle">
+      按类别分类的中药材
+    </view>
+
+    <view wx:for="{{medicinelist}}" wx:key="title" class="listitem" bindtap="clickListInfo" data-msg="{{item.title}}">
+
+      <text class="title">{{item.title}}</text>
+
+      <view class="next">
+        <text>共收录{{item.count}}种</text>
+        <image src="/assets/images/next.png"></image>
+      </view>
+
+    </view>
+  </view>
+
+  <view class="footer">
+    我也是有底线的哟~
+  </view>
+
+</view>

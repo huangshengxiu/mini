@@ -1,0 +1,12 @@
+page {
+  position: relative;
+  height: 100%;
+}
+
+scroll-view {
+  position: absolute;
+  top: 240rpx;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

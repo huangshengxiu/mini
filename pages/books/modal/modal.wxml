@@ -1,0 +1,18 @@
+<!--pages/pre_component/modal/modal.wxml-->
+<view wx:if="{{isShow}}">
+  <view class="modal_body">
+
+    <view class="modal_title">
+      <text>提醒</text>
+    </view>
+    <view class="warning">
+      <text>{{warntext}}</text>
+    </view>
+    <view class="modal_event">
+      <view class="cancel_btn" bindtap="closeModal">取消</view>
+      <view class="confirm_btn">
+        <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="btn">确定</button>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,53 @@
+<!--pages/books/setbox/setbox.wxml-->
+<view wx:if="{{showbox}}">
+  <view class="mask" bindtap="hiddenbox"></view>
+  <view class="setbox">
+    <view class="wrapper" bindtap="pre">
+      <image src="../../../assets/images/previous.png" class="img"></image>
+      <view>上一章</view>
+    </view>
+    <view class="wrapper" bindtap="dir">
+      <image src="../../../assets/images/dir.png" class="img"></image>
+      <view>目录</view>
+    </view>
+    <view class="wrapper" bindtap="showfont">
+      <image src="../../../assets/images/font.png" class="img"></image>
+      <view>字体</view>
+    </view>
+    <view class="wrapper" bindtap="setcolor" wx:if="{{night}}">
+      <image src="../../../assets/images/color.png" class="img"></image>
+      <view>白天</view>
+    </view>
+    <view class="wrapper" bindtap="setcolor" wx:else>
+      <image src="../../../assets/images/night.png" class="img"></image>
+      <view>夜晚</view>
+    </view>
+    <view class="wrapper" bindtap="next">
+      <image src="../../../assets/images/nextchapter.png" class="img"></image>
+      <view>下一章</view>
+    </view>
+  </view>
+
+  <view class="color" wx:if="{{showMain}}">
+
+    <view class="fontsize">
+      <view class="title">字号</view>
+      <view class="botton">
+        <view class="btn" bindtap="bigfont">放大</view>
+        <view class="btn" bindtap="smallfont">缩小</view>
+      </view>
+    </view>
+
+    <view class="bgc">
+      <view class="title">背景</view>
+
+      <view class="botton">
+        <view wx:for="{{colorArr}}" wx:for-item="color" wx:key="this">
+          <view class="colorstyle {{index==currentIndex?'select':''}}" style="background:{{color.value}}" data-num="{{index}}" bindtap="changecolor"></view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+</view>

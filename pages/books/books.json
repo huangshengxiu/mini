@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "w-tab-control": "/components/w-tab-control/w-tab-control",
+    "searchresult": "/components/search_result/search_result",
+    "bookitem": "./bookitem/bookitem"
+  },
+  "navigationBarTitleText": "医书古籍"
+}

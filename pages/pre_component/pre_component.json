@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "modal": "./modal/modal"
+  },
+  "navigationBarTitleText": "中药识方"
+}

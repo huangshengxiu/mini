@@ -1,0 +1,15 @@
+<!--pages/books/directory/directory.wxml-->
+<view wx:if="{{showDir}}">
+  <view class="mask" bindtap="hiddenDir" animation="{{animationData}}"></view>
+  <view class="dir">
+    <scroll-view scroll-y class="directory">
+      <view class="title">目录</view>
+      <view wx:for="{{volume}}" wx:for-item="volumeitem" wx:key="volumeitem">
+        <view class="volume">{{volumeitem==''?'前言':volumeitem}}</view>
+        <view wx:for="{{directory[volumeitem]}}" wx:key="id">
+          <view class="chapter" data-id="{{item.id}}" bindtap="toRead">{{item.article}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

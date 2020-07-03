@@ -1,0 +1,26 @@
+<!--pages/imgdetail/imgdetail.wxml-->
+<view class="search_content">
+  <view class="content_main">
+    <icon type="search" class="search_icon" size="17"></icon>
+    <input class="input_class" placeholder="请输入内容" type="text" focus="{{focusInput}}" confirm-type="search" bindinput="getData" bindconfirm="commitclick" value="{{inputValue}}"></input>
+    <icon wx-if="{{inputValue}}" type="clear" class="clear_icon" size="17" bindtap="clearInput"></icon>
+  </view>
+  <text class="search_commit" bindtap="commitclick">搜素</text>
+  <text class="search_cancel" bindtap="cancelclick">取消</text>
+</view>
+
+<view class="choose">
+  <view wx:for="{{chooselist}}" wx:key="name" class="item {{currentIndex==index?'select':''}}" data-num="{{index}}" bindtap="changeselect">
+    {{item.name}}
+  </view>
+</view>
+
+<view class="search_result">
+  <scroll-view class="search_scroll" scroll-y>
+    <view wx:for="{{chooselist[currentIndex].list}}" wx:key="_id" bindtap="toDetail" data-name="{{item.name}}" class="result_title" wx:if="{{chooselist[currentIndex].list.length}}">
+      <view class="result_name">{{item.name}}</view>
+    </view>
+    <view wx:if="{{chooselist[currentIndex].list.length&&inputValue}}" class="footer distance">没有更多数据了</view>
+    <view wx:if="{{chooselist[currentIndex].list.length==0&&inputValue}}" class="footer">没有找到数据</view>
+  </scroll-view>
+</view>

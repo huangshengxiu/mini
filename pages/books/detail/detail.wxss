@@ -1,0 +1,96 @@
+/* pages/books/detail/detail.wxss */
+
+page {
+  background: #eee;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 300rpx;
+  margin-bottom: 20rpx;
+}
+
+.header_img {
+  height: 280rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+
+.header_info {
+  height: 280rpx;
+  display: flex;
+  flex: 1;
+  padding-right: 30rpx;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 50rpx;
+}
+
+.book_name {
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.book_year {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dir {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.dir_img {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 5rpx;
+}
+
+.scroll {
+  width: 100%;
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+.book_info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.info_text {
+  text-indent: 2em;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  padding: 0rpx 20rpx;
+}
+
+.footer {
+  height: 100rpx;
+  width: 100%;
+  box-sizing: border-box;
+  background: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx 100rpx;
+}
+
+.footer view{
+  width: 200rpx;
+  height: 100%;
+  text-align: center;
+  line-height: 80rpx;
+}

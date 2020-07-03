@@ -1,0 +1,10 @@
+<!--pages/books/category/category.wxml-->
+<view>
+  <view wx:for="{{categorylist}}" wx:key="book_name" data-name="{{item.book_name}}" bindtap="toDetail">
+    <bookitem bookitem="{{item}}"></bookitem>
+  </view>
+  <view class="footer">
+    已经到底啦~
+  </view>
+
+</view>

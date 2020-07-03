@@ -1,0 +1,17 @@
+/* pages/about/about.wxss */
+
+page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0rpx 10rpx;
+  box-sizing: border-box;
+}
+
+.text {
+  text-indent: 2em;
+  font-size: 30rpx;
+  line-height: 60rpx;
+}

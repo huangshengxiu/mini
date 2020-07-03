@@ -1,0 +1,20 @@
+<!--pages/detail/medicine/medicine.wxml-->
+<view>
+  <image src="{{baseUrl+content[img_name]}}" class="img" mode="widthFix"></image>
+
+  <block wx:for="{{titleArray}}" wx:key="item">
+    <view class="box">
+      <image src="../../../assets/images/title.png" class="title_img">
+        <text class="img_title">{{directory[item]}}</text>
+      </image>
+      <view class="content">
+        {{content[item]}}
+      </view>
+    </view>
+  </block>
+
+  <view class="footer">
+    已经到底啦~
+  </view>
+
+</view>

@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "searchresult": "/components/search_result/search_result",
+    "directory": "/components/directory/directory",
+    "itemlist": "/components/itemlist/itemlist",
+    "backtop": "/components/backtop/backtop",
+    "bottomtip": "/components/bottomtip/bottomtip",
+    "showsearchtxt": "/components/showSearchTxt/showSearchTxt"
+  },
+  "navigationBarTitleText": "中药大全"
+}

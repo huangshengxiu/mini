@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "directory": "../directory/directory",
+    "setbox": "../setbox/setbox"
+  }
+}

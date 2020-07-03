@@ -1,0 +1,26 @@
+<!--pages/medicine/medicine.wxml-->
+<view>
+
+  <searchresult bind:parentShow="showWhich" bind:parentGetData="getData" resultlist="{{searchResult}}" bind:parentSearchData="confirmData" name="{{name}}" page="{{page}}"></searchresult>
+
+  <block>
+    <directory leftArr="{{medicinal}}" rightArr="{{alphabet}}" lefttitle="{{lt}}" righttitle="{{rt}}" bind:parentChangeData="updatelist" wx:if="{{showdirectory}}"></directory>
+    <showsearchtxt wx:else searchTxt="{{searchTxt}}" keyword="{{keyword}}" bindtap="resetToDir"></showsearchtxt>
+  </block>
+  <block wx:if="{{isShow}}">
+    <scroll-view scroll-y bindscrolltolower="loadMore" scroll-with-animation="true" scroll-top="{{topPosition}}" bindscroll="scrollPosition">
+      <view wx:for="{{medicineArray}}" wx:key="medicine_name" data-name="{{item.medicine_name}}" bindtap="toDetail">
+        <view class="item_body">
+          <view class="title">{{item.medicine_name}}</view>
+          <view class="text">【别名】{{item.nice_name}}</view>
+          <view class="text">【来源】{{item.origin}}</view>
+          <view class="text">【性味】{{item.meridian_tropism}}</view>
+        </view>
+      </view>
+      <bottomtip showEnding="{{showEnding}}"></bottomtip>
+    </scroll-view>
+  </block>
+
+  <backtop bindtap="onBackTop" wx:if="{{showBackTop}}"></backtop>
+
+</view>

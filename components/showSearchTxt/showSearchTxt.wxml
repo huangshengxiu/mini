@@ -1,0 +1,10 @@
+<!--components/showSearchTxt/showSearchTxt.wxml-->
+<view class="showSearchTxt">
+  <view class="searchTxt">
+    <text class="important">{{keyword}}</text> 中包含
+    <text class="important">{{searchTxt}}</text> 关键字的数据有：
+  </view>
+  <view class="cancel_btn">
+    <text>重置</text>
+  </view>
+</view>

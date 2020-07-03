@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "searchresult": "/components/search_result/search_result",
+    "backtop": "/components/backtop/backtop",
+    "bottomtip": "/components/bottomtip/bottomtip"
+  },
+  "navigationBarTitleText": "中药传说"
+}

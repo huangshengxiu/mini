@@ -1,0 +1,12 @@
+<!--pages/books/reader/reader.wxml-->
+<view>
+
+  <directory directory="{{directory}}" bookname="{{book_name}}" id="directory" bind:parentEvent="resetscroll" dirfrom="{{dirFrom}}" bind:parentchange="setnewdata"></directory>
+
+  <setbox id="setbox" bind:parentpre="showpre" bind:parentnext="shownext" bind:parentdir="showDir" bind:parentday="changeDay" bind:parentbig="bigfont" bind:parentsmall="smallfont" bind:parentcolor="changecolor" colorArr="{{colorArr}}"></setbox>
+
+  <scroll-view class="scroll" style="background:{{bgcolor}}" scroll-y="{{canscroll}}" bindtap="showsetbox" scroll-with-animation="true" scroll-top="{{topPosition}}">
+    <view wx:for="{{contentArr}}" wx:key="item" class="text" style="font-size:{{fontsize}}rpx;line-height:{{fontsize*2}}rpx;color:{{nightfontcolor}}">{{item}}</view>
+  </scroll-view>
+
+</view>

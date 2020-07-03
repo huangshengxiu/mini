@@ -1,0 +1,37 @@
+<!-- <view wx:for="{{contentArr}}" wx:key="item" class="text">
+  {{item}}
+</view> -->
+
+<view>
+
+  <view class="search_content">
+    <view class="content_main" bindtap="tosearchbook">
+      <icon type="search" class="search_icon" size="17"></icon>
+      <text class="search_text">搜索</text>
+    </view>
+  </view>
+
+  <view class="book_title">
+    书籍分类
+  </view>
+
+  <view class="icon">
+    <view wx:for="{{iconlist}}" wx:key="name" class="iconitem" bindtap="clickInfo" data-msg="{{item.name}}">
+      <image src="{{item.url}}"></image>
+      <view>{{item.name}}</view>
+    </view>
+  </view>
+
+  <view class="book_recommend">
+    <text class="leftview">经典推荐</text>
+    <view class="rightview" bindtap="changebook">
+      <image src="../../assets/images/change.png" class="change_img"></image>
+      <text class="change_text">换一换</text>
+    </view>
+  </view>
+
+  <view wx:for="{{recommendlist}}" wx:key="book_name" data-name="{{item.book_name}}" bindtap="toDetail">
+    <bookitem bookitem="{{item}}"></bookitem>
+  </view>
+
+</view>

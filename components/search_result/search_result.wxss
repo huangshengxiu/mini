@@ -1,0 +1,134 @@
+.search_body {
+  width: 100%;
+  height: 110rpx;
+  background: #ddd;
+  padding: 20rpx 20rpx;
+  box-sizing: border-box;
+}
+
+.search_main {
+  width: 100%;
+  height: 70rpx;
+  position: relative;
+}
+
+.search_tip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70rpx;
+  background: white;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  border-radius: 8rpx;
+  z-index: 3;
+}
+
+.tip {
+  margin-left: 10rpx;
+}
+
+.search_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.content_main {
+  background: white;
+  border: 1px solid transparent;
+  border-radius: 8rpx;
+  position: relative;
+  padding-left: 28px;
+  padding-right: 32px;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+  margin-right: 20rpx;
+}
+
+.search_icon {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  margin-top: -8px;
+}
+
+.input_class {
+  width: 100%;
+  height: 70rpx;
+  padding-left: 10rpx;
+}
+
+.inputtip_class {
+  font-size: 26rpx;
+  color: #cdcdcd;
+}
+
+.clear_icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -16px;
+  padding: 8px;
+  width: 16px;
+  height: 16px;
+  -webkit-mask-size: 16px;
+  mask-size: 16px;
+}
+
+.search_commit {
+  font-size: 29rpx;
+  width: 80rpx;
+  line-height: 48rpx;
+  color: lightseagreen;
+  padding-right: 20rpx;
+}
+
+.search_cancel {
+  font-size: 29rpx;
+  width: 80rpx;
+  line-height: 48rpx;
+  color: lightcoral;
+}
+
+.search_result {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 110rpx;
+  background: whitesmoke;
+  z-index: 100;
+}
+
+.result_title {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #666;
+  background: #efefef;
+  padding-left: 30rpx;
+  border-top: 10rpx solid white;
+  box-sizing: border-box;
+}
+
+.footer {
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  background: #efefef;
+  font-size: 24rpx;
+}
+
+.color {
+  background: #ddd;
+}

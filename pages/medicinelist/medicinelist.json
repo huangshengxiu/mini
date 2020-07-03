@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "itemlist": "/components/itemlist/itemlist",
+    "searchresult": "/components/search_result/search_result",
+    "backtop": "/components/backtop/backtop",
+    "bottomtip": "/components/bottomtip/bottomtip",
+    "title": "./title/title"
+  },
+  "navigationBarTitleText": "分类列表"
+}

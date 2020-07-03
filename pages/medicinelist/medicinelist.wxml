@@ -1,0 +1,20 @@
+<!--pages/medicinelist/medicinelist.wxml-->
+<view>
+
+  <searchresult bind:parentShow="showWhich" bind:parentGetData="getData" resultlist="{{searchResult}}" bind:parentSearchData="confirmData" name="{{name}}" page="{{page}}"></searchresult>
+
+  <title bind:parentResetData='resetData' category="{{title}}" searchTxt="{{searchTxt}} " id='title' keyword="{{keyword}}"></title>
+
+  <block wx:if="{{isShow}}">
+    <scroll-view scroll-y bindscrolltolower="loadMore" scroll-with-animation="true" scroll-top="{{topPosition}} " bindscroll="scrollPosition">
+      <view wx:for="{{medicinelist}}" wx:key="medicine_name" bindtap="toDetail" data-name="{{item.medicine_name}}">
+        <itemlist toChildmsg="{{item}}"></itemlist>
+      </view>
+
+      <bottomtip showEnding="{{showEnding}}"></bottomtip>
+    </scroll-view>
+  </block>
+
+  <backtop bindtap="onBackTop" wx:if="{{showBackTop}}"></backtop>
+
+</view>

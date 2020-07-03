@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/books/books",
+    "pages/center/center",
+    "pages/imgdetail/imgdetail",
+    "pages/books/reader/reader",
+    "pages/pre_img/pre_img",
+    "pages/pre_component/pre_component",
+    "pages/story/story",
+    "pages/detail/story/story",
+    "pages/detail/medicine/medicine",
+    "pages/medicinelist/medicinelist",
+    "pages/medicine/medicine",
+    "pages/prescription/prescription",
+    "pages/detaila/detaila",
+    "pages/detail/prescription/prescription",
+    "pages/books/searchbook/searchbook",
+    "pages/books/category/category",
+    "pages/books/detail/detail",
+    "pages/bookcase/bookcase",
+    "pages/about/about"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00BB4A",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "debug": true,
+  "tabBar": {
+    "selectedColor": "#53BA47",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "中药首页",
+        "iconPath": "/assets/images/tabbar/medicine.png",
+        "selectedIconPath": "/assets/images/tabbar/medicine_active.png"
+      },
+      {
+        "pagePath": "pages/books/books",
+        "text": "医书古籍",
+        "iconPath": "/assets/images/tabbar/book.png",
+        "selectedIconPath": "/assets/images/tabbar/book_active.png"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "text": "个人中心",
+        "iconPath": "/assets/images/tabbar/mine.png",
+        "selectedIconPath": "/assets/images/tabbar/mine_active.png"
+      }
+    ]
+  }
+}

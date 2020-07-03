@@ -1,0 +1,5 @@
+<!--components/bottomtip/bottomtip.wxml-->
+<view class="tip_body">
+  <view class="tip_loading" wx:if="{{showEnding}}">没有更多数据啦~</view>
+  <view class="tip_footer" wx:else style="color:red">更多数据加载中...</view>
+</view>

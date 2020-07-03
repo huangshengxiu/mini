@@ -1,0 +1,41 @@
+<!--pages/pre_component/pre_component.wxml-->
+<view>
+  <modal id="modal" bind:parentCloseModal="showInput"></modal>
+</view>
+
+<view class="header">
+  <view class="left" bindtap="openModal">
+    <image src="../../assets/images/add.png" class="left_img"></image>
+    <text class="left_text">添加中药</text>
+  </view>
+  <view bindtap="clearList" class="clear">
+    <image class="clear_img" src="../../assets/images/clear.png"></image>
+  </view>
+</view>
+
+<view class="item_body">
+  <block wx:for="{{componentList}}" wx:key='name'>
+    <view class="item_normal {{item.repeat?'repeat':' '}}" bindlongpress="removeItem" data-name="{{item.name}}">
+      <text>{{item.name}}</text>
+    </view>
+  </block>
+</view>
+
+<view class="resultcontent">
+  <scroll-view class="resultcontent" scroll-y wx:if="{{showResult}}" scroll-with-animation="true" class="container">
+    <view wx:for="{{resultlist}}" wx:key="_id" bindtap="toDetail" data-name="{{item.prescription_name}}" data-page="{{item.origin}}" class="result_title" wx:if="{{resultlist.length}}">
+      <view class="result_name">{{item.prescription_name}}</view>
+      <view class="result_origin">出自{{item.origin}}</view>
+    </view>
+    <view wx:if="{{resultlist.length}}" class="footer distance">没有更多数据了</view>
+    <view wx:else class="footer">没有数据</view>
+  </scroll-view>
+
+  <view wx:else class="tip">
+    <view class="content">
+      <view>1.点击上方添加图标可添加中药，添加成功后自动搜索对应的方剂；</view>
+      <view>2.长按某味中药时，可以删除此药；</view>
+      <view>3.点击右上方删除图标可一次性清空全部中药。</view>
+    </view>
+  </view>
+</view>

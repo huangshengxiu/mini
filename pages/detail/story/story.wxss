@@ -1,0 +1,12 @@
+/* pages/detail/story/story.wxss */
+
+.body {
+  padding: 20rpx;
+  background: whitesmoke;
+}
+
+.content {
+  text-indent: 2em;
+  font-size: 30rpx;
+  line-height: 45rpx;
+}

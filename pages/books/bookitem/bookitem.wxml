@@ -1,0 +1,10 @@
+<!--pages/books/bookitem/bookitem.wxml-->
+<view class="wrapper">
+  <image src="{{book_img}}" mode="widthFix" class="book_img"></image>
+  <view class="book_info">
+    <view class="book_name">【书名】{{bookitem.book_name}}</view>
+    <view class="book_author">【作者】{{bookitem.author}}</view>
+    <view class="book_dynasty">【朝代】{{bookitem.dynasty}}</view>
+    <view class="book_year">【年份】{{bookitem.year}}</view>
+  </view>
+</view>

@@ -1,0 +1,33 @@
+<!--pages/books/detail/detail.wxml-->
+<modal id="modalone" warntext="{{onetext}}" bind:parentclick="changeInclude"></modal>
+<modal id="modaltwo" warntext="{{twotext}}" bind:parentclick="changeInclude"></modal>
+<directory directory="{{directory}}" bookname="{{book_name}}" id="directory" bind:parentEvent="resetscroll" dirfrom="{{dirFrom}}"></directory>
+<view class="header">
+  <image src="{{book_img}}" class="header_img" mode="heightFix"></image>
+  <view class="header_info">
+    <view class="book_name">{{bookInfo.book_name}}</view>
+    <view>作者：{{bookInfo.author}}</view>
+    <view>年份：{{bookInfo.year}}</view>
+    <view class="book_year">
+      <view>朝代：{{bookInfo.dynasty}}</view>
+      <view class="dir" bindtap="showDir">
+        <image src="../../../assets/images/directory.png" class="dir_img"></image>
+        <text>目录</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="scroll">
+  <scroll-view class="book_info" scroll-y="{{canscroll}}">
+    <view wx:for="{{info}}" wx:key="item" class="info_text">
+      {{item}}
+    </view>
+  </scroll-view>
+</view>
+
+<view class="footer">
+  <view bindtap="addbook" wx:if="{{notInclude}}">加入书架</view>
+  <view wx:else bindtap="removebook">已加入</view>
+  <view bindtap="toRead">点击阅读</view>
+</view>

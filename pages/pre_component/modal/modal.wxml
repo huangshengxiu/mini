@@ -1,0 +1,21 @@
+<!--pages/pre_component/modal/modal.wxml-->
+<view wx:if="{{isShow}}" animation="{{animationData}}">
+  <view class="wrapper" bindtap="closeModal" wx:if="{{isShow}}">
+  </view>
+  <view class="modal_body">
+
+    <view class="modal_title">
+      <text>请添加一种中药</text>
+    </view>
+    <view class="modal_input">
+      <input type="text" class="input_body" placeholder-class="inputTxt" focus="{{focus}}" bindinput="formatValue" value="{{inputValue}}"></input>
+    </view>
+    <view wx:if="{{showWarning}}" class="warning">
+      <text>输入内容不能为空！</text>
+    </view>
+    <view class="modal_event">
+      <view class="cancel_btn" bindtap="closeModal">取消</view>
+      <view class="confirm_btn" bindtap="showInput">确定</view>
+    </view>
+  </view>
+</view>

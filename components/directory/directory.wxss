@@ -1,0 +1,69 @@
+/* components/directory/directory.wxss */
+
+.wrapper {
+  width: 100%;
+  height: 130rpx;
+  background: whitesmoke;
+  padding: 20rpx 0;
+  border-bottom: 2rpx solid #e4e4e4;
+  box-sizing: border-box;
+}
+
+.inner {
+  width: 100%;
+  height: 100%;
+}
+
+.left_picker, .right_picker {
+  float: left;
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.left_picker picker, .right_picker picker {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right_picker {
+  position: relative;
+}
+
+.right_picker:after {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 0;
+  content: '';
+  width: 0;
+  border-left: 2rpx solid #ccc;
+}
+
+.showselect {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.selectTxt {
+  padding-left: 30rpx;
+  font-size: 30rpx;
+}
+
+.cancel_btn {
+  width: 100rpx;
+  height: 60rpx;
+  font-size: 30rpx;
+  border-radius: 6rpx;
+  margin-right: 30rpx;
+  background: #aaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,6 @@
+<!--pages/detail/story/story.wxml-->
+<view class="body">
+  <view wx:for="{{contentArr}}" wx:key="item" class="content">
+    <view>{{item}}</view>
+  </view>
+</view>

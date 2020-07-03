@@ -1,0 +1,29 @@
+<!--pages/story/story.wxml-->
+
+<view class="head">
+  <searchresult bind:parentShow="showWhich" bind:parentGetData="getData" resultlist="{{searchResult}}" bind:parentSearchData="confirmData" name="{{name}}" page="{{page}}"></searchresult>
+</view>
+
+<view class="searchTitle" wx:if='{{showSearch}}'>
+  <view class="searchTxt">
+    包含
+    <text class="important">{{searchTxt}}</text> 关键字的数据有：
+  </view>
+  <view class="cancel_btn">
+    <text bindtap="reset">重置</text>
+  </view>
+</view>
+
+<view class="content">
+  <scroll-view scroll-y bindscrolltolower="loadMore" scroll-with-animation="true" scroll-top="{{topPosition}}" bindscroll="scrollPosition" wx:if="{{isShow}}" class="container">
+    <view wx:for="{{storylist}}" wx:key="story_name" bindtap="toDetail" data-name="{{item.story_name}}" class="title_body">
+      <view class="title">{{item.story_name}}</view>
+      <image src="/assets/images/next.png" class="next"></image>
+    </view>
+
+    <bottomtip showEnding="{{showEnding}}"></bottomtip>
+
+  </scroll-view>
+</view>
+
+<backtop wx:if="{{showBackTop}}" bindtap="onBackTop"></backtop>

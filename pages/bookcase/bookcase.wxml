@@ -1,0 +1,13 @@
+<!--pages/bookcase/bookcase.wxml-->
+<view>
+
+  <view class="wrapper">
+    <view wx:for="{{bookcase}}" wx:key="book_name" data-name="{{item.book_name}}" data-index="{{index}}" bindlongpress="deletebook" bindtap="toDetail" class="item">
+      <view class="img">
+        <image src="{{baseURL}}{{item.book_img}}" class="item_img" mode="heightFix"> </image>
+      </view>
+      <text class="item_text">{{item.book_name}}</text>
+    </view>
+  </view>
+
+</view>

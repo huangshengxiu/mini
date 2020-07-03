@@ -1,0 +1,49 @@
+<view class="search">
+
+  <!-- 搜索框 -->
+  <view class="search_body">
+    <view class="search_main">
+
+      <block wx-if="{{showPrevious}}">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" wx:if="{{notstory}}">
+          <label class="search_tip">
+            <!-- bindtap="showInput" -->
+            <icon type="search" size="18"></icon>
+            <text class="tip">搜索</text>
+          </label>
+        </picker>
+        <label class="search_tip" wx:else bindtap="showInput">
+          <!-- bindtap="showInput" -->
+          <icon type="search" size="18"></icon>
+          <text class="tip">搜索</text>
+        </label>
+      </block>
+
+      <block wx-if="{{showInput}}">
+        <view class="search_content">
+          <view class="content_main">
+            <icon type="search" class="search_icon" size="17"></icon>
+            <input class="input_class" placeholder="请输入内容" placeholder-class="inputtip_class" value="{{inputVal}}" bindinput="inputTyping" focus="{{showInput}}" bindconfirm="parentSearch" type="text" confirm-type="search" bindblur="resetStyle" bindfocus="showNow"></input>
+            <icon wx-if="{{inputVal}}" type="clear" class="clear_icon" size="17" bindtap="clearInput"></icon>
+          </view>
+          <text class="search_commit" bindtap="commitclick">搜素</text>
+          <text class="search_cancel" bindtap="cancelclick">取消</text>
+        </view>
+      </block>
+
+    </view>
+  </view>
+
+  <!-- 搜索结果列表 -->
+  <view class="search_result" wx:if="{{isShow}}">
+
+    <view wx:for="{{resultlist}}" wx:key="name" bindtap="toDetail" data-name="{{item[name]}}">
+      <view class="result_title">{{item[name]}}</view>
+    </view>
+
+    <view wx:if="{{resultlist.length}}" class="footer color">没有更多数据了</view>
+    <view wx:if="{{ resultlist.length==0 && inputVal.length }}" class="footer">没有找到相关内容</view>
+
+  </view>
+
+</view>
